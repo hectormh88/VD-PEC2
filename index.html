@@ -3,22 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Principal de Visualizaciones</title>
+    <title>Visualización de datos - UOC</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         iframe {
             width: 100%;
-            height: 500px; /* Ajusta según la necesidad */
-            border: none; /* Elimina el borde del iframe */
+            height: 900px;
+            border: none;
+        }
+        .container {
+            padding-top: 20px;
+        }
+        .btn {
+            margin: 5px;
         }
     </style>
 </head>
 <body>
-    <h1>Bienvenido a las Visualizaciones de Datos</h1>
-    <button onclick="showGraph('graph1.html')">Ver Gráfico de Dispersión</button>
-    <button onclick="showGraph('graph2.html')">Ver Gráfico de Barras</button>
-    <button onclick="showGraph('graph3.html')">Ver Gráfico Circular</button>
-    
-    <iframe id="graphFrame"></iframe>
+    <div class="container">
+        <h1 class="mb-4">PEC 1 - Visualización de datos - Héctor Martínez</h1>
+        <div class="btn-group">
+            <button class="btn btn-primary" onclick="showGraph('graph1.html')">Scatter plot</button>
+            <button class="btn btn-info" onclick="showGraph('graph2.html')">Stream graph</button>
+            <button class="btn btn-success" onclick="showGraph('graph3.html')">Horizon graph</button>
+        </div>
+        
+        <iframe id="graphFrame"></iframe>
+    </div>
 
     <script>
         function showGraph(graph) {
