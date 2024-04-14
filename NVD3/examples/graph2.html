@@ -13,16 +13,23 @@
         svg {
             display: block;
         }
-        html, body, svg {
+        html, body, #chartContainer {
             margin: 0px;
             padding: 0px;
+            height: 95%;
+            width: 100%;
+        }
+        #chart1 {
             height: 100%;
             width: 100%;
         }
     </style>
 </head>
 <body class='with-3d-shadow with-transitions'>
-<svg id="chart1"></svg>
+    <div id="chartContainer">
+        <h1 style="text-align: left; font-family: Arial, sans-serif; font-size: 20px; color: #333; margin: 20px 0; padding-left: 10px;">Evolución de la población de los actuales países de la Unión Europea</h1>
+        <svg id="chart1"></svg>
+    </div>
 
 <script>
 
