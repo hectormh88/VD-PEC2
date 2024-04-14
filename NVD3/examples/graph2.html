@@ -6979,8 +6979,11 @@
             .controlLabels({stacked: "Stacked"})
             .duration(300);
 
-        chart.xAxis.tickFormat(function(d) { return d3.time.format('%x')(new Date(d)) });
-        chart.yAxis.tickFormat(d3.format(',.4f'));
+        chart.xAxis.tickFormat(function(d) { return d3.time.format('%Y')(new Date(d)) });
+        chart.yAxis.tickFormat(function(d) {
+            return Math.round(d / 1000000) + 'MM'; // Redondea el resultado y añade 'MM'
+        });        
+        
 
         chart.legend.vers('furious');
 
